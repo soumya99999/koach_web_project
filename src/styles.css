@@ -201,12 +201,13 @@
   align-items: center;
   gap: 20px;
   padding: 20px;
-  background: #ffffff; 
+  background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  min-height: 100px; 
+  min-height: 100px;
   width: 100%;
-  max-width: 400px; 
+  max-width: 400px;
+  margin: 0 auto; 
   transition: box-shadow 0.3s ease;
 }
 
@@ -236,13 +237,14 @@
   object-fit: cover;
 }
 
+
 .user-info {
   flex: 1;
 }
 
 .user-info h2 {
   margin: 0 0 8px 0;
-  color: #2d3748; 
+  color: #2d3748;
   font-size: 1.5rem;
   font-weight: 600;
 }
@@ -257,41 +259,67 @@
   overflow: hidden;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
   .user-profile {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    max-width: 300px;
+    padding: 15px;
+    max-width: 300px; 
+    margin-left:14px;
   }
 
   .user-info {
     text-align: center;
   }
 
-  .avatar {
-    margin-bottom: 10px;
+  .user-info h2 {
+    font-size: 1.25rem;
   }
-  .avatar img {
+
+  .user-info p {
+    font-size: 12px;
+  }
+
+  .avatar {
     width: 80px;
     height: 80px;
+    margin-bottom: 15px;
   }
-  
+
+  .avatar img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .user-profile.loading {
+    max-width: 100%;
+    margin: 0 auto;
+  }
 }
 
-
-.toast-retry-btn {
-  margin-left: 10px;
-  padding: 4px 10px;
-  background: var(--primary);
-  color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: background 0.3s ease;
+@media screen and (max-width: 415px) {
+  .user-profile {
+    max-width: 280px; 
+  }
 }
 
-.toast-retry-btn:hover {
-  background: var(--primary-hover);
+@media screen and (max-width: 391px) {
+  .user-profile {
+    max-width: 260px; 
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .user-profile {
+    max-width: 240px; 
+    margin-left:14px;
+  }
+}
+
+@media screen and (max-width: 361px) {
+  .user-profile {
+    max-width: 240px;
+    margin-left:10px;
+  }
 }
