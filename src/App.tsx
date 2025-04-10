@@ -8,7 +8,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <div className="app">
-        <h1>User Dashboard</h1>
+        <h1 className="header">User Dashboard</h1>
         <Routes>
           <Route path="/users/:userId" element={<Dashboard />} />
           <Route path="/" element={<UserList />} />
